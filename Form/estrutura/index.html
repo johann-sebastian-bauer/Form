@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+     <!-- a tag <form> serve para "avisar" para o código que o que está dentro da tag deve ser considerada um formulario, e o que está dentro da action vai ser mandado para um arquivo, e-mail, entre outras "ações" que podem ser feitas -->
+     <!-- a tag method define se as informações vao ser mandadas para o arquivo pela url ou nao, como o meu formulario é grande, nao vou mandar pela URL -->
+    <form action="arquivo.cs" method="get">
+       <h1>Formulario do Johann Bauer</h1>
+        <!-- a tag <label> serve para escrever um pedaço de texto que ficará atrelado ao input que você colocar no atributo for -->
+        <label for="fname">Qual seu primeiro nome:</label>
+        <!-- a tag input serve para colocar um conteudo que pode ser interagido pelo usuário com a finalidade de coleta de dados, essas informações vão ser atreladas ao e-mail ou arquivo, existem diversos tipos de input: -->
+        <!-- input type="text", que serve para  textos -->
+        <input type="text" id="fname" name="fname">
+        
+        <!-- input type="checkbox" que deixa o usuario escolher um ou mais valores entre uma gama de opções diferentes -->
+        <br>
+        <input type="checkbox" id="op1" name="op1" value="1">
+        <label for="vehicle1"> essa</label><br>
+        <input type="checkbox" id="op2" name="op2" value="2">
+        <label for="vehicle2"> essa</label><br>
+        <input type="checkbox" id="op3" name="op3" value="3">
+        <label for="vehicle3"> e essa</label><br>
+        
+        <!-- input type="color" que permite o usuário selecionar uma cor especifica usando a ferramenta de seleção de cor, pode ser usado para definir o fundo de uma pagina usando javascript -->
+        <br>
+        <label for="corpref">qual é a cor que você prefere</label>
+        <input type="color" id="corpref" name="corpref">
+
+        <!-- input type="date" que serve para o usuário selecionar uma data específica, sem poder selecionar um horario -->
+        <br>
+        <label for="dia">que dia é hoje?</label>
+        <input type="date" id="dia" name="dia">
+
+        <!-- input type="time" que permite o usuário selecionar um horario, sem poder selecionar uma data -->
+        <br>
+        <label for="hora">Qual o horario que começa a segunda aula?</label>
+        <input type="time" id="hora" name="hora">
+
+        <!-- input type="datetime-local" que requere o usuário colocar uma data e horario especifico, sem permitir entrada de fuso-horario -->
+        <br>
+        <label for="diahora-l">que dia e horario começa o IEESEM</label>
+        <input type="datetime-local" id="diahora-l" name="diahora-l">
+
+        <!-- input type="e-mail" que pede um e-mail ao usuário, validando automaticamente ao enviar e necessitando o usuario colocar um @ entre seus caracteres, com conteúdo depois do @ -->
+        <br>
+        <label for="email">qual o seu e-mail:</label>
+        <input type="email" id="email" name="email">
+
+        <!-- input type="file" que tem o fim de permitir o usuário anexar um arquivo ao formulario -->
+        <br>
+        <label for="arquivo">Anexe seu Curriculo</label>
+        <input type="file" id="arquivo" name="arquivo">
+
+        <!-- o input type="hidden" serve para mandar informações que nao precisam ser vistas ao usuário, porém pode ser alterado facilmente usando o editor de texto, então nao deve ser usado para segurança de dados -->
+        <!-- a tag value serve para definir um valor prévio para um input -->
+        <br>
+        <input type="hidden" id="custId" name="custId" value="3487">
+
+        <!-- input type="image" serve para usar uma imagem como o type="subit", que será explicado no final -->
+        <!-- <br>
+        <input type="image" src="sua imagem aqui.png" alt="Submit" id="imagem1"> -->
+
+        <!-- input type="month" permite o usuario escrever um mês e um ano -->
+        <br>
+        <label for="mes">que dia vai ser o IEESEM?</label>
+        <input type="month" id="mes" name="mes">
+
+        <!-- input type="number" serve para o usuario colocar um número, podendo aumentar e diminuir o mesmo usando as flechas do lado, e nao podendo colocar texto que nao seja um numero -->
+        <!-- o min e max serve para definir um valor minimo e maximo para o numero -->
+        <br>
+        <label for="num">quantos estudantes vao para o IEESEM:</label>
+        <input type="number" id="num" name="num" min="1" max="720">
+
+        <!-- input type="password" define um lugar para o usuario colocar uma senha, que nao pode ser vista -->
+        <br>
+        <label for="senha">qual a sua senha, nao coloque sua senha verdadeira porque esse form vai pro meu email</label>
+        <input type="password" id="senha" name="senha">
+
+        <!-- input type="radio" serve para fazer o usuario escolher uma alternativa entre varias -->
+        <br>
+        <p>qual seu sexo:</p>
+        <input type="radio" id="helicoptero" name="sexo" value="helicoptero-de-ataque">
+        <label for="helicoptero">helicoptero de ataque</label><br>
+        <input type="radio" id="c#" name="sexo" value="C#">
+        <label for="c#">CSS</label><br>
+        <input type="radio" id="javascript" name="sexo" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        
+        <!-- input type="range" serve para fazer um slider entre valores -->
+        <br>
+        <label for="vol">Volume (entre 0 e 50):</label>
+        <input type="range" id="vol" name="vol" min="0" max="50">
+
+        <!-- input type="search" serve para o usuario poder buscar informações -->
+        <br>
+        <label for="search">Pesquisar:</label>
+        <input type="search" id="search" name="search">
+
+        <!-- input type="tel" serve para telefones -->
+        <!-- o pattern serve para definir o padrao que o telefone seve seguir -->
+        <br>
+        <label for="phone">coloque seu telefone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
+
+        <!-- o input type="url" serve para links -->
+        <br>
+        <label for="link">coloque o seu link:</label>
+        <input type="url" id="link" name="link">
+
+        <!-- input type="week" faz o usuario escolher uma semana -->
+        <br>
+        <label for="semana">qual é a semana do IEESEM:</label>
+        <input type="week" id="semana" name="semana">
+
+        <!-- o input type="reset" é um botão que tira todo o texto e informações postas no formulario -->
+        <br>
+        <input type="reset">
+
+        <!-- input type="submit" envia o formulario -->
+        <input type="submit">
+    </form>
+</body>
+</html>
